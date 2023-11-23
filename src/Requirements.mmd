@@ -1,0 +1,22 @@
+graph 
+
+subgraph Работа с приемами пищи
+    UploadImage[Загрузить изображение из галереи] --> ActivateAlgo[Активировать алгоритм распознавания]
+    PickImage[Делать фото] --> ActivateAlgo
+    ActivateAlgo -->CorrectionDishForm[Вывести окно, которое уточнит у пользователя информацию о блюде]
+    CorrectionDishForm --> InformDish[Подтянуть к блюду и граммовкам показатели КБЖУ]
+    InputDishForm[Вводить блюдо и граммовку вручную]--> InformDish
+    InformDish --> SaveDish[Сохранять прием пищи]
+    InformDish --> DelDish[Удалять прием пищи]
+    InformDish --> EditDish[Редактировать прием пищи]
+end
+subgraph Остальное
+    VievRecomendDiet[Просматривать индивидуальный план диеты] --> CreateRecomendDiet[Формировать рекомендации по питанию]
+    VievStats[Просматривать статистику]--> CreateStats[Формировать статистику]
+    GetNotifications[Получать уведомления] --> CreateNotifications[Формировать уведомления]
+    VievRecomendDiet --> InputProfileInfo[Вводить параметры: пол, вес, рост, возраст, диета]
+    VievRecomendDiet --> EditProfileInfo[Редактировать параметры: пол, вес, рост, возраст, диета]
+    GetNotifications --> EditNotifications[Настраивать уведомления]
+end
+
+
