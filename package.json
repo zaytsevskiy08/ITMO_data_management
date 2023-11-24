@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "npx ncc build ./src/main.ts"
+  },
+  "dependencies": {
+	"@mermaid-js/mermaid-cli": "^10.2.4"
+  }
+}

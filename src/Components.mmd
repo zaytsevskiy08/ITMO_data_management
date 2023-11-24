@@ -1,0 +1,27 @@
+C4Context
+    accTitle: App Container
+    accDescr: Components
+
+    Person(person, "Пользователь", "Пользователь, который использует приложение")
+
+    Container_Boundary(App, "Приложение", "") {
+        Component(landingApp, "Домашняя страница", "Kotlin", "Главный экран")
+        Component(dietApp, "Диеты", "Kotlin", "Индивидуальные планы питания")
+        Component(statApp, "Статистика", "Kotlin", "Статистика пользователя")
+        Component(profileApp, "Профиль", "Kotlin", "Настройки")
+    }
+
+    System_Ext(system, "Система", "Обрабатывает данные и выводит пользователю результат")
+    Container(statApi, "API статистики", "API Gateway", "API, которое позволяет работать со статистикой")
+    Container(dietApi, "API диет", "API Gateway", "API, которое позволяет управлять индивидуальным планом питания")
+    Container(profileApi, "API настроек", "API Gateway", "API, которое позволяет настраивать приложение")
+
+    Rel(person, landingApp,,)
+    Rel(landingApp, system,,)
+    Rel(person, statApp,,)
+    Rel(statApp, statApi,,)
+    Rel(person, dietApp,,)
+    Rel(dietApp, dietApi,,)
+    Rel(person, profileApp,,)
+    Rel(profileApp, profileApi,,)
+
