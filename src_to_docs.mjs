@@ -2,7 +2,7 @@ import { run } from "@mermaid-js/mermaid-cli"
 import puppeteer from "puppeteer"
 
 const browser = await puppeteer.launch({
-  headless: false
+  headless: true
 })
 
 await run("src/Components.mmd", "docs/Components.svg")
