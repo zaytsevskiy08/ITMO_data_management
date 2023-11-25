@@ -4,6 +4,7 @@
     "build": "npx ncc build ./src/main.ts"
   },
   "dependencies": {
-    "@mermaid-js/mermaid-cli": "^10.6.1"
+    "@mermaid-js/mermaid-cli": "^10.6.1",
+    "puppeteer": "^5.5.0"
   }
 }
