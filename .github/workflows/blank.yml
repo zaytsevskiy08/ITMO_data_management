@@ -43,6 +43,7 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
+          git config http.postBuffer 524288000
           git add .
           git commit -m "Generate SVG file"
           git push origin HEAD:main
